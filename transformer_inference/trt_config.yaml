@@ -1,0 +1,9 @@
+# TensorRT Quantization Configuration
+precision: INT8
+calibration_batches: 100
+max_batch_size: 64
+max_workspace_gb: 4
+optimization_profiles:
+  - min_seq_len: 16
+    opt_seq_len: 128
+    max_seq_len: 512
