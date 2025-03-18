@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  vlm-server:
+    build: ..
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    ports:
+      - "30000:30000"
+      - "8001:8001"
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
