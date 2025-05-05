@@ -1,0 +1,11 @@
+build/
+*.o *.a *.so *.out
+*.trt *.engine
+__pycache__/ *.pyc
+.env
+*.egg-info/ dist/
+checkpoints/ *.ckpt *.pt *.pth
+data/
+*.ncu-rep
+.vscode/ .idea/
+
